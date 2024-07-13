@@ -1,160 +1,20 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
-    behaviors {
-        lgui1_1: lgui1_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI1_1";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N1)>, <&to 1>;
+        keymap {
+                compatible = "zmk,keymap";
+                label = "42block";
+                default_layer {
+                label = "Default";
+                	bindings = <
+               &kp ESC &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp BACKSPACE
+               &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp SEMI_COLON &kp QUOTE
+               &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH
+                     &kp CTRL &kp ALT &kp GUI   &kp ENTER &kp SPACE &kp SHIFT
+                        >;
+                };
         };
-
-        lgui2_2: lgui2_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI2_2";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N2)>, <&to 2>;
-        };
-
-        lgui3_3: lgui3_3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI3_3";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N3)>, <&to 3>;
-        };
-
-        lgui4_4: lgui4_4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI4_4";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N4)>, <&to 4>;
-        };
-
-        lgui5_5: lgui5_5 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI5_5";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N5)>, <&to 5>, <&kp K_PLAY_PAUSE>;
-        };
-
-        lgui6_6: lgui6_6 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI6_6";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N6)>, <&to 6>;
-        };
-
-        lgui7_7: lgui7_7 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI7_7";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N7)>, <&to 7>;
-        };
-
-        lgui8_8: lgui8_8 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI8_8";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N8)>, <&to 8>;
-        };
-
-        lgui9_9: lgui9_9 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI9_9";
-            #binding-cells = <0>;
-            bindings = <&kp LG(N9)>, <&to 9>;
-        };
-
-        lgui3_media: lgui3_media {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LGUI3_MEDIA";
-            #binding-cells = <0>;
-            bindings = <&kp LG(NUMBER_3)>, <&to 1>, <&kp K_PLAY_PAUSE>;
-        };
-    };
-
-    combos { compatible = "zmk,combos"; };
-
-    keymap {
-        compatible = "zmk,keymap";
-        label = "42block";
-
-        default_layer {
-            label = "Default";
-            bindings = <
-&lgui7_7  &lgui8_8  &lgui9_9
-&lgui4_4  &lgui5_5  &lgui6_6
-&lgui1_1  &lgui2_2  &lgui3_3
-            >;
-        };
-
-        media {
-            bindings = <
-&lt 7 K_PREVIOUS  &kp K_VOL_UP  &kp RS(K_NEXT)
-&kp K_PLAY_PAUSE  &kp K_VOL_DN  &trans
-&to 0             &trans        &trans
-            >;
-        };
-
-        bt_layer {
-            label = "bt";
-            bindings = <
-&lt 7 A       &bl BL_TOG    &rgb_ug RGB_TOG
-&bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
-            >;
-        };
-
-        minecraft_1 {
-            bindings = <
-&lt 7 Q    &kp W      &kp E
-&kp A      &kp S      &kp D
-&kp LSHFT  &kp LCTRL  &lt 4 SPACE
-            >;
-        };
-
-        minecraft_2 {
-            bindings = <
-&lt 7 B     &kp F5  &kp F3
-&kp ESCAPE  &kp F   &kp GRAVE
-&trans      &trans  &trans
-            >;
-        };
-
-        arrows {
-            bindings = <
-&lt 7 PAGE_DOWN  &kp UP   &kp PG_UP
-&kp LEFT         &kp UP   &kp RIGHT
-&kp HOME         &kp ESC  &kp END
-            >;
-        };
-
-        mouse {
-            bindings = <
-&lt 7 A  &trans  &trans
-&trans   &trans  &trans
-&trans   &trans  &trans
-            >;
-        };
-
-        reset {
-            bindings = <
-&trans  &trans  &to 0
-&trans  &trans  &trans
-&to 1   &to 2   &bootloader
-            >;
-        };
-
-        numpad {
-            bindings = <
-&lt 7 N7  &kp N8  &kp N9
-&kp N4    &kp N5  &kp N6
-&kp N1    &kp N2  &kp N3
-            >;
-        };
-    };
 };
+
