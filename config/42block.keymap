@@ -1,20 +1,19 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-                label = "42block";
-                default_layer {
-                label = "Default";
-                	bindings = <
-               &kp ESC   &kp Q    &kp W   &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I      &kp O      &kp P          &kp BACKSPACE
-               &kp ESC   &kp A    &kp S   &kp D     &kp F     &kp G     &kp H     &kp J     &kp K      &kp L      &kp SEMI_COLON &kp QUOTE
-               &kp SHIFT &kp Z   &kp X    &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA  &kp PERIOD &kp SLASH      &kp CTRL
-                                                    &kp CTRL &kp ALT &kp GUI   &kp ENTER &kp SPACE &kp SHIFT
-                        >;
-                };
-        };
-};
+    keymap {
+        compatible = "zmk,keymap";
+        label = "42block";
 
+        default_layer {
+            label = "Default";
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E              &kp R         &kp T         &kp Y    &kp U      &kp I      &kp O       &kp P      &kp BACKSPACE
+&kp ESC    &kp A  &kp S  &kp D              &kp F         &kp G         &kp H    &kp J      &kp K      &kp L       &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C              &kp V         &kp B         &kp N    &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp LS(LG(LA(LCTRL)))
+                         &kp LG(LA(LSHFT))  &kp LG(LALT)  &kp LG(LGUI)  &kp RET  &kp SPACE  &kp RSHFT
+            >;
+        };
+    };
+};
