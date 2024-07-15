@@ -1,2 +1,2 @@
 config SHIELD_42BLOCK
-    def_bool $(shields_list_contains, 42block)
+    def_bool $(shields_list_contains,42block)
