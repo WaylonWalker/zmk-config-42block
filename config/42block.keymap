@@ -1,7 +1,25 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        gaming_active: gaming_active {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GAMING_ACTIVE";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&to 3>;
+        };
+
+        gaming_deactive: gaming_deactive {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GAMING_DEACTIVE";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>, <&to 0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         label = "42block";
@@ -9,10 +27,10 @@
         default_layer {
             label = "Default";
             bindings = <
-&kp TAB    &kp Q    &kp W  &kp E              &kp R         &kp T         &kp Y    &kp U      &kp I      &kp O       &kp P      &kp BACKSPACE
-&kp ESC    &lt 2 A  &kp S  &kp D              &kp F         &kp G         &kp H    &kp J      &kp K      &kp L       &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z    &kp X  &kp C              &kp V         &kp B         &kp N    &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp LS(LG(LA(LCTRL)))
-                           &kp LG(LA(LSHFT))  &kp LG(LALT)  &kp LG(LGUI)  &kp RET  &kp SPACE  &kp RSHFT
+&kp TAB    &gaming_active  &kp W  &kp E             &kp R        &lt 8 T    &lt 8 Y  &kp U        &kp I              &kp O       &kp P      &kp BACKSPACE
+&kp ESC    &lt 2 A         &kp S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G      &kp H    &mt RCTRL J  &mt RIGHT_SHIFT K  &kp L       &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z           &kp X  &lt 5 C           &lt 6 V      &lt 7 B    &kp N    &kp M        &kp COMMA          &kp PERIOD  &kp SLASH  &kp LS(LG(LA(LCTRL)))
+                                  &kp LG(LGUI)      &kp LALT     &kp LCTRL  &kp RET  &lt 1 SPACE  &kp RSHFT
             >;
         };
 
@@ -36,10 +54,10 @@
 
         gaming {
             bindings = <
-&kp TAB    &kp Q      &kp W  &kp E      &kp R      &kp T      &kp Y    &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp LSHFT  &kp S  &kp D      &kp F      &kp G      &kp H    &kp J      &kp K      &kp L    &kp L     &kp SQT
-&kp ESC    &kp Z      &kp X  &kp C      &kp V      &kp B      &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
-                             &kp LSHFT  &kp SPACE  &kp LCTRL  &kp RET  &kp SPACE  &kp RSHFT
+&kp TAB    &kp Q      &kp W  &kp E      &kp R      &kp T      &kp Y             &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHFT  &kp LSHFT  &kp S  &kp D      &kp F      &kp G      &kp H             &kp J      &kp K      &kp L    &kp L     &kp SQT
+&kp ESC    &kp Z      &kp X  &kp C      &kp V      &kp B      &kp N             &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
+                             &kp LSHFT  &kp SPACE  &kp LCTRL  &gaming_deactive  &kp SPACE  &kp RSHFT
             >;
         };
 
@@ -70,7 +88,7 @@
             >;
         };
 
-        winjoin {
+        sendwin {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(N7))  &kp LG(LS(N8))  &kp LG(LS(N9))  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(N4))  &kp LG(LS(N5))  &kp LG(LS(N6))  &trans  &trans
@@ -81,10 +99,10 @@
 
         fkeys {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans   &kp F7  &kp F8  &kp F9  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans   &kp F4  &kp F5  &kp F6  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans   &trans
-                        &trans  &trans  &trans  &trans   &trans  &trans
+&bootloader  &trans  &trans        &trans        &trans        &out OUT_USB  &trans   &kp F7  &kp F8  &kp F9  &trans   &trans
+&bt BT_CLR   &trans  &bt BT_SEL 4  &trans        &trans        &out OUT_BLE  &trans   &kp F4  &kp F5  &kp F6  &kp F11  &kp F12
+&trans       &trans  &bt BT_SEL 1  &bt BT_SEL 1  &bt BT_SEL 3  &bt BT_SEL 0  &kp F10  &kp F1  &kp F2  &kp F3  &trans   &trans
+                                   &trans        &trans        &trans        &trans   &trans  &trans
             >;
         };
     };
