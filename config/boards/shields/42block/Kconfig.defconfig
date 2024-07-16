@@ -10,9 +10,9 @@ config ZMK_MOUSE
     default y
 
 config BT_MAX_CONN
-    default 8
+    default 10
 
 config BT_MAX_PAIRED
-    default 8
+    default 10
 
 endif

@@ -115,8 +115,8 @@
 
         fkeys {
             bindings = <
-&bootloader  &trans  &trans        &trans        &trans        &out OUT_USB  &trans   &kp F7  &kp F8  &kp F9  &trans   &trans
-&bt BT_CLR   &trans  &bt BT_SEL 4  &trans        &trans        &out OUT_BLE  &trans   &kp F4  &kp F5  &kp F6  &kp F11  &kp F12
+&bootloader  &trans  &bt BT_SEL 7  &bt BT_SEL 8  &bt BT_SEL 9  &out OUT_USB  &trans   &kp F7  &kp F8  &kp F9  &trans   &trans
+&bt BT_CLR   &trans  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &trans   &kp F4  &kp F5  &kp F6  &kp F11  &kp F12
 &trans       &trans  &bt BT_SEL 1  &bt BT_SEL 1  &bt BT_SEL 3  &bt BT_SEL 0  &kp F10  &kp F1  &kp F2  &kp F3  &trans   &trans
                                    &trans        &trans        &mo 9         &trans   &trans  &trans
             >;
