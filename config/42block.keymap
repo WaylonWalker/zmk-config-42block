@@ -16,7 +16,23 @@
             compatible = "zmk,behavior-tap-dance";
             label = "GAMING_DEACTIVE";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>, <&to 0>;
+            bindings = <&kp RIGHT_SHIFT>, <&to 0>;
+        };
+    };
+
+    macros {
+        vim___0: vim___0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END &kp ENTER>;
+            label = "vim___0";
+        };
+
+        vim___w: vim___w {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "VIM___W";
         };
     };
 
@@ -38,35 +54,35 @@
             bindings = <
 &kp LS(EXCL)  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
 &trans        &trans        &trans      &trans         &trans        &trans         &trans         &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans      &trans         &trans        &trans         &trans         &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans      &trans         &trans        &trans         &kp MINUS      &kp EQUAL     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
                                         &kp BACKSPACE  &kp TAB       &kp DEL        &trans         &trans        &trans
             >;
         };
 
         numpad {
             bindings = <
-&kp TAB  &trans  &trans         &kp LBKT      &kp RBKT      &kp LS(PRCNT)  &kp LS(PLUS)  &kp N7     &kp N8     &kp N9  &kp STAR       &kp BSPC
-&trans   &trans  &kp LS(UNDER)  &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(DLLR)   &kp MINUS     &kp N4     &kp N5     &kp N6  &kp LS(UNDER)  &kp GRAVE
-&trans   &trans  &kp DOT        &kp LS(LBRC)  &kp LS(RBRC)  &kp N0         &kp N0        &kp N1     &kp N2     &kp N3  &kp DOT        &kp FSLH
-                                &trans        &trans        &kp LCTRL      &kp RET       &kp SPACE  &kp RSHFT
+&kp TAB  &trans  &trans     &kp LBKT                         &kp RBKT                                &lt 8 PERCENT  &kp LS(PLUS)  &kp N7  &kp N8  &kp N9  &kp STAR       &kp BSPC
+&trans   &trans  &kp UNDER  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LS(LEFT_CONTROL) RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS     &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
+&trans   &trans  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                     &kp N0         &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
+                            &trans                           &trans                                  &trans         &trans        &trans  &trans
             >;
         };
 
         gaming {
             bindings = <
-&kp TAB    &kp Q      &kp W  &kp E      &kp R      &kp T      &kp Y             &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp LSHFT  &kp S  &kp D      &kp F      &kp G      &kp H             &kp J      &kp K      &kp L    &kp L     &kp SQT
-&kp ESC    &kp Z      &kp X  &kp C      &kp V      &kp B      &kp N             &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
-                             &kp LSHFT  &kp SPACE  &kp LCTRL  &gaming_deactive  &kp SPACE  &kp RSHFT
+&kp TAB                  &kp Q  &kp W  &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I           &kp O    &kp P     &kp BSPC
+&kp LSHFT                &kp A  &kp S  &kp D      &kp F      &kp G      &kp H      &kp J      &kp K           &kp L    &kp L     &kp SQT
+&mt LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA       &kp DOT  &kp FSLH  &trans
+                                       &kp LSHFT  &kp SPACE  &kp LCTRL  &kp ENTER  &kp SPACE  &gaming_active
             >;
         };
 
         vimmy {
             bindings = <
-&kp TAB  &trans   &kp LC(RIGHT)  &kp LC(RIGHT)  &kp LEFT   &trans        &kp LC(C)  &kp PG_UP  &kp HOME   &kp END    &kp LC(V)  &kp DEL
+&kp TAB  &trans   &kp LC(RIGHT)  &kp LC(RIGHT)  &kp LEFT   &trans        &kp LC(C)  &kp PG_UP  &kp HOME   &vim___0   &kp LC(V)  &kp DEL
 &trans   &kp END  &kp HOME       &kp PG_DN      &trans     &trans        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
 &trans   &trans   &trans         &trans         &kp GRAVE  &kp LC(LEFT)  &trans     &trans     &kp LBKT   &kp RBKT   &kp BSLH   &kp LS(TILDE)
-                                 &kp LG(LGUI)   &trans     &kp LCTRL     &kp RET    &trans     &kp RSHFT
+                                 &trans         &trans     &trans        &kp RET    &trans     &kp RSHFT
             >;
         };
 
@@ -102,7 +118,16 @@
 &bootloader  &trans  &trans        &trans        &trans        &out OUT_USB  &trans   &kp F7  &kp F8  &kp F9  &trans   &trans
 &bt BT_CLR   &trans  &bt BT_SEL 4  &trans        &trans        &out OUT_BLE  &trans   &kp F4  &kp F5  &kp F6  &kp F11  &kp F12
 &trans       &trans  &bt BT_SEL 1  &bt BT_SEL 1  &bt BT_SEL 3  &bt BT_SEL 0  &kp F10  &kp F1  &kp F2  &kp F3  &trans   &trans
-                                   &trans        &trans        &trans        &trans   &trans  &trans
+                                   &trans        &trans        &mo 9         &trans   &trans  &trans
+            >;
+        };
+
+        media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp K_PREVIOUS    &kp K_NEXT  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans      &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &kp K_PLAY_PAUSE  &trans
             >;
         };
     };
