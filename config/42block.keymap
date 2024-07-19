@@ -18,6 +18,16 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT_SHIFT>, <&to 0>;
         };
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+        };
     };
 
     macros {
@@ -44,7 +54,7 @@
             label = "Default";
             bindings = <
 &kp TAB    &gaming_active  &kp W  &kp E             &kp R        &lt 8 T    &lt 8 Y  &kp U        &kp I              &kp O       &kp P      &kp BACKSPACE
-&lt 4 ESC  &lt 2 A         &kp S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G      &kp H    &mt RCTRL J  &mt RIGHT_SHIFT K  &kp L       &kp SEMI   &kp SQT
+&lt 4 ESC  &lt 2 A         &kp S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G      &kp H    &hm RCTRL J  &hm RIGHT_SHIFT K  &kp L       &kp SEMI   &kp SQT
 &kp LSHFT  &kp Z           &kp X  &lt 5 C           &lt 6 V      &lt 7 B    &kp N    &kp M        &kp COMMA          &kp PERIOD  &kp SLASH  &kp LS(LG(LA(LCTRL)))
                                   &kp LG(LGUI)      &kp LALT     &kp LCTRL  &kp RET  &lt 1 SPACE  &kp RSHFT
             >;
