@@ -60,6 +60,33 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        jk-esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <19 20>;
+            require-prior-idle-ms = <125>;
+        };
+
+        ui-backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <7 8>;
+            require-prior-idle-ms = <125>;
+        };
+
+        m,-del {
+            bindings = <&kp DELETE>;
+            key-positions = <31 32>;
+        };
+
+        df-tab {
+            bindings = <&kp TAB>;
+            key-positions = <16 17>;
+            require-prior-idle-ms = <125>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         label = "42block";
