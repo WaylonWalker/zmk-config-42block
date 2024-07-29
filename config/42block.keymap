@@ -82,7 +82,7 @@
 
         df-tab {
             bindings = <&kp TAB>;
-            key-positions = <16 17>;
+            key-positions = <16 15>;
             require-prior-idle-ms = <125>;
         };
     };
