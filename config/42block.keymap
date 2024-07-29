@@ -103,10 +103,10 @@
 
         symbols {
             bindings = <
-&kp LS(EXCL)  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
-&trans        &trans        &trans      &trans         &trans        &trans         &trans         &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans      &trans         &trans        &trans         &kp MINUS      &kp EQUAL     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
-                                        &kp BACKSPACE  &kp TAB       &kp DEL        &trans         &trans        &trans
+&trans  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
+&trans  &trans        &trans      &kp TILDE      &kp GRAVE     &kp ESCAPE     &kp TAB        &kp BACKSPACE  &kp DELETE    &trans        &trans        &kp GRAVE
+&trans  &trans        &trans      &trans         &trans        &trans         &kp MINUS      &kp EQUAL      &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
+                                  &kp BACKSPACE  &kp TAB       &kp DEL        &trans         &trans         &trans
             >;
         };
 
@@ -130,10 +130,10 @@
 
         vimmy {
             bindings = <
-&kp TAB  &trans   &kp LC(RIGHT)  &kp LC(RIGHT)  &kp LEFT   &trans        &kp LC(C)  &kp PG_UP  &kp HOME   &vim___0   &kp LC(V)  &kp DEL
-&trans   &kp END  &kp HOME       &kp PG_DN      &trans     &trans        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-&trans   &trans   &trans         &trans         &kp GRAVE  &kp LC(LEFT)  &trans     &trans     &kp LBKT   &kp RBKT   &kp BSLH   &kp LS(TILDE)
-                                 &trans         &trans     &trans        &kp RET    &trans     &kp RSHFT
+&trans  &trans   &kp LC(RIGHT)  &kp LC(RIGHT)  &kp LEFT   &trans        &kp LC(C)  &kp PG_UP  &kp HOME   &vim___0   &kp LC(V)  &kp DEL
+&trans  &kp END  &kp HOME       &kp PG_DN      &trans     &trans        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+&trans  &trans   &trans         &trans         &kp GRAVE  &kp LC(LEFT)  &trans     &trans     &kp LBKT   &kp RBKT   &kp BSLH   &kp LS(TILDE)
+                                &trans         &trans     &trans        &kp RET    &trans     &kp RSHFT
             >;
         };
 
@@ -166,9 +166,9 @@
 
         fkeys {
             bindings = <
-&bootloader  &trans  &bt BT_SEL 7  &bt BT_SEL 8  &bt BT_SEL 9  &out OUT_USB  &trans   &kp F7  &kp F8  &kp F9  &trans   &trans
-&bt BT_CLR   &trans  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &trans   &kp F4  &kp F5  &kp F6  &kp F11  &kp F12
-&trans       &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 0  &kp F10  &kp F1  &kp F2  &kp F3  &trans   &trans
+&bootloader  &trans  &bt BT_SEL 7  &bt BT_SEL 8  &bt BT_SEL 9  &out OUT_USB  &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
+&bt BT_CLR   &trans  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
+&trans       &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 0  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
                                    &trans        &trans        &mo 9         &trans   &trans  &trans
             >;
         };
