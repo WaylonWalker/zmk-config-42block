@@ -113,10 +113,10 @@
 
         symbols {
             bindings = <
-&trans  &kp LS(EXCL)       &kp LS(AT)  &kp LS(POUND)         &kp LS(DLLR)            &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)         &kp LS(STAR)            &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
-&trans  &kp DOUBLE_QUOTES  &kp SQT     &hm TILDE LEFT_SHIFT  &hm GRAVE LEFT_CONTROL  &kp ESCAPE     &kp TAB        &hm BACKSPACE RCTRL  &hm DELETE RIGHT_SHIFT  &trans        &trans        &kp GRAVE
-&trans  &trans             &trans      &trans                &trans                  &trans         &kp MINUS      &kp EQUAL            &kp LS(LBRC)            &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
-                                       &kp BACKSPACE         &kp TAB                 &kp DEL        &trans         &trans               &trans
+&trans  &kp LS(EXCL)       &kp LS(AT)  &kp LS(POUND)         &kp LS(DLLR)            &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)                 &kp LS(STAR)             &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
+&trans  &kp DOUBLE_QUOTES  &kp SQT     &hm LEFT_SHIFT TILDE  &hm LEFT_CONTROL GRAVE  &kp ESCAPE     &kp TAB        &hm RIGHT_CONTROL BACKSPACE  &hm RS(RIGHT_SHIFT) DEL  &trans        &trans        &kp GRAVE
+&trans  &trans             &trans      &trans                &trans                  &trans         &kp MINUS      &kp EQUAL                    &kp LS(LBRC)             &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
+                                       &kp BACKSPACE         &kp TAB                 &kp DEL        &trans         &trans                       &trans
             >;
         };
 
