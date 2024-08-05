@@ -28,7 +28,7 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <75>;
         };
 
         hl: homerow_layer {
@@ -40,7 +40,7 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <75>;
         };
     };
 
@@ -113,19 +113,19 @@
 
         symbols {
             bindings = <
-&trans  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
-&trans  &trans        &trans      &kp TILDE      &kp GRAVE     &kp ESCAPE     &kp TAB        &kp BACKSPACE  &kp DELETE    &trans        &trans        &kp GRAVE
-&trans  &trans        &trans      &trans         &trans        &trans         &kp MINUS      &kp EQUAL      &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
-                                  &kp BACKSPACE  &kp TAB       &kp DEL        &trans         &trans         &trans
+&trans  &kp LS(EXCL)       &kp LS(AT)  &kp LS(POUND)         &kp LS(DLLR)            &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)         &kp LS(STAR)            &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
+&trans  &kp DOUBLE_QUOTES  &kp SQT     &hm TILDE LEFT_SHIFT  &hm GRAVE LEFT_CONTROL  &kp ESCAPE     &kp TAB        &hm BACKSPACE RCTRL  &hm DELETE RIGHT_SHIFT  &trans        &trans        &kp GRAVE
+&trans  &trans             &trans      &trans                &trans                  &trans         &kp MINUS      &kp EQUAL            &kp LS(LBRC)            &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
+                                       &kp BACKSPACE         &kp TAB                 &kp DEL        &trans         &trans               &trans
             >;
         };
 
         numpad {
             bindings = <
-&trans  &trans     &kp SQT    &kp LBKT                         &kp RBKT                                &lt 8 PERCENT  &kp LS(PLUS)  &kp N7  &kp N8  &kp N9  &kp STAR       &trans
-&trans  &kp SQT    &kp UNDER  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LS(LEFT_CONTROL) RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS     &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
-&trans  &kp UNDER  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                     &kp N0         &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
-                              &trans                           &trans                                  &trans         &trans        &trans  &trans
+&trans  &trans     &kp SQT    &kp LBKT                         &kp RBKT                            &hl 8 PERCENT  &hl 8 PLUS  &kp N7  &kp N8  &kp N9  &kp STAR       &trans
+&trans  &kp SQT    &kp UNDER  &hm LEFT_SHIFT LEFT_PARENTHESIS  &hm LEFT_CONTROL RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS   &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
+&trans  &kp UNDER  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                 &kp N0         &kp N0      &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
+                              &trans                           &trans                              &trans         &trans      &trans  &trans
             >;
         };
 
