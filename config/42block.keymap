@@ -55,7 +55,7 @@
         vim___w: vim___w {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp LC(RIGHT)>;
             label = "VIM___W";
         };
     };
@@ -85,6 +85,16 @@
             key-positions = <16 15>;
             require-prior-idle-ms = <125>;
         };
+
+        gaming-active {
+            bindings = <&to 3>;
+            key-positions = <15 16 19 20>;
+        };
+
+        gaming-deactive {
+            bindings = <&to 0>;
+            key-positions = <27 28 32 31>;
+        };
     };
 
     keymap {
@@ -94,10 +104,10 @@
         default_layer {
             label = "Default";
             bindings = <
-&kp TAB    &gaming_active  &kp W  &kp E             &kp R        &hl 8 T    &hl 8 Y  &kp U        &kp I              &kp O       &kp P            &kp BACKSPACE
-&hl 4 ESC  &hl 2 A         &kp S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G      &kp H    &hm RCTRL J  &hm RIGHT_SHIFT K  &kp L       &hl 2 SEMICOLON  &hl 4 SQT
-&kp LSHFT  &kp Z           &kp X  &hl 5 C           &hl 6 V      &hl 7 B    &kp N    &kp M        &kp COMMA          &kp PERIOD  &kp SLASH        &kp LS(LG(LA(LCTRL)))
-                                  &kp LG(LGUI)      &kp LALT     &kp LCTRL  &kp RET  &lt 1 SPACE  &kp RSHFT
+&kp TAB    &gaming_active  &kp W    &kp E             &kp R        &hl 8 T    &hl 8 Y  &kp U        &kp I              &kp O       &kp P            &kp BACKSPACE
+&kp ESC    &hl 4 A         &hl 2 S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G      &kp H    &hm RCTRL J  &hm RIGHT_SHIFT K  &hl 2 L     &hl 4 SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z           &kp X    &hl 5 C           &hl 6 V      &hl 7 B    &kp N    &kp M        &kp COMMA          &kp PERIOD  &kp SLASH        &kp LS(LG(LA(LCTRL)))
+                                    &kp LGUI          &kp LALT     &kp LCTRL  &kp RET  &lt 1 SPACE  &kp RSHFT
             >;
         };
 
@@ -121,8 +131,8 @@
 
         gaming {
             bindings = <
-&kp TAB                  &kp Q  &kp W  &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I             &kp O    &kp P     &kp BSPC
-&kp LSHFT                &kp A  &kp S  &kp D      &kp F      &kp G      &kp H      &kp J      &kp K             &kp L    &kp L     &kp SQT
+&kp TAB                  &kp Q  &kp W  &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I             &kp O    &kp P     &trans
+&kp LSHFT                &kp A  &kp S  &kp D      &kp F      &kp G      &kp H      &kp J      &kp K             &kp L    &kp L     &trans
 &mt LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA         &kp DOT  &kp FSLH  &trans
                                        &kp LSHFT  &kp SPACE  &kp LCTRL  &kp ENTER  &kp SPACE  &gaming_deactive
             >;
