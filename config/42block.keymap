@@ -122,10 +122,10 @@
 
         numpad {
             bindings = <
-&kp TAB  &trans  &trans     &kp LBKT                         &kp RBKT                                &lt 8 PERCENT  &kp LS(PLUS)  &kp N7  &kp N8  &kp N9  &kp STAR       &kp BSPC
-&trans   &trans  &kp UNDER  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LS(LEFT_CONTROL) RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS     &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
-&trans   &trans  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                     &kp N0         &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
-                            &trans                           &trans                                  &trans         &trans        &trans  &trans
+&kp TAB  &trans     &kp SQT    &kp LBKT                         &kp RBKT                                &lt 8 PERCENT  &kp LS(PLUS)  &kp N7  &kp N8  &kp N9  &kp STAR       &trans
+&trans   &kp SQT    &kp UNDER  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LS(LEFT_CONTROL) RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS     &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
+&trans   &kp UNDER  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                     &kp N0         &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
+                               &trans                           &trans                                  &trans         &trans        &trans  &trans
             >;
         };
 
