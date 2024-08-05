@@ -122,10 +122,10 @@
 
         numpad {
             bindings = <
-&kp TAB  &trans     &kp SQT    &kp LBKT                         &kp RBKT                                &lt 8 PERCENT  &kp LS(PLUS)  &kp N7  &kp N8  &kp N9  &kp STAR       &trans
-&trans   &kp SQT    &kp UNDER  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LS(LEFT_CONTROL) RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS     &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
-&trans   &kp UNDER  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                     &kp N0         &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
-                               &trans                           &trans                                  &trans         &trans        &trans  &trans
+&trans  &trans     &kp SQT    &kp LBKT                         &kp RBKT                                &lt 8 PERCENT  &kp LS(PLUS)  &kp N7  &kp N8  &kp N9  &kp STAR       &trans
+&trans  &kp SQT    &kp UNDER  &mt LEFT_SHIFT LEFT_PARENTHESIS  &mt LS(LEFT_CONTROL) RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS     &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
+&trans  &kp UNDER  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                     &kp N0         &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
+                              &trans                           &trans                                  &trans         &trans        &trans  &trans
             >;
         };
 
@@ -140,9 +140,9 @@
 
         vimmy {
             bindings = <
-&trans  &trans   &kp LC(RIGHT)  &kp LC(RIGHT)  &kp LEFT   &trans        &kp LC(C)  &kp PG_UP  &kp HOME   &vim___0   &kp LC(V)  &kp DEL
+&trans  &trans   &kp LC(RIGHT)  &kp LC(RIGHT)  &kp LEFT   &trans        &kp LC(C)  &kp PG_UP  &kp HOME   &vim___0   &kp LC(V)  &trans
 &trans  &kp END  &kp HOME       &kp PG_DN      &trans     &trans        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-&trans  &trans   &trans         &trans         &kp GRAVE  &kp LC(LEFT)  &trans     &trans     &kp LBKT   &kp RBKT   &kp BSLH   &kp LS(TILDE)
+&trans  &trans   &kp DEL        &trans         &kp GRAVE  &kp LC(LEFT)  &trans     &trans     &kp LBKT   &kp RBKT   &kp BSLH   &trans
                                 &trans         &trans     &trans        &kp RET    &trans     &kp RSHFT
             >;
         };
