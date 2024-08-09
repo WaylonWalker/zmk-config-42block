@@ -113,16 +113,16 @@
 
         symbols {
             bindings = <
-&trans  &kp LS(EXCL)       &kp LS(AT)  &kp LS(POUND)         &kp LS(DLLR)            &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)                 &kp LS(STAR)             &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
-&trans  &kp DOUBLE_QUOTES  &kp SQT     &hm LEFT_SHIFT TILDE  &hm LEFT_CONTROL GRAVE  &kp ESCAPE     &kp TAB        &hm RIGHT_CONTROL BACKSPACE  &hm RS(RIGHT_SHIFT) DEL  &trans        &trans        &kp GRAVE
-&trans  &trans             &trans      &trans                &trans                  &trans         &kp MINUS      &kp EQUAL                    &kp LS(LBRC)             &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
-                                       &kp BACKSPACE         &kp TAB                 &kp DEL        &trans         &trans                       &trans
+&trans  &kp LS(EXCL)       &kp LS(AT)            &kp LS(POUND)         &kp LS(DLLR)            &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)                 &kp LS(STAR)             &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
+&trans  &kp DOUBLE_QUOTES  &kp SQT               &hm LEFT_SHIFT TILDE  &hm LEFT_CONTROL GRAVE  &kp ESCAPE     &kp TAB        &hm RIGHT_CONTROL BACKSPACE  &hm RS(RIGHT_SHIFT) DEL  &trans        &trans        &kp GRAVE
+&trans  &trans             &kp NON_US_BACKSLASH  &kp SLASH             &kp PIPE                &kp UNDER      &kp MINUS      &kp EQUAL                    &kp LS(LBRC)             &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
+                                                 &kp BACKSPACE         &kp TAB                 &kp DEL        &trans         &trans                       &trans
             >;
         };
 
         numpad {
             bindings = <
-&trans  &trans     &kp SQT    &kp LBKT                         &kp RBKT                            &hl 8 PERCENT  &hl 8 PLUS  &kp N7  &kp N8  &kp N9  &kp STAR       &trans
+&trans  &trans     &trans     &kp LBKT                         &kp RBKT                            &hl 8 PERCENT  &hl 8 PLUS  &kp N7  &kp N8  &kp N9  &kp STAR       &trans
 &trans  &kp SQT    &kp UNDER  &hm LEFT_SHIFT LEFT_PARENTHESIS  &hm LEFT_CONTROL RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS   &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
 &trans  &kp UNDER  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                 &kp N0         &kp N0      &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
                               &trans                           &trans                              &trans         &trans      &trans  &trans
