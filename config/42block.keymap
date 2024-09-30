@@ -88,12 +88,12 @@
 
         gaming-active {
             bindings = <&to 3>;
-            key-positions = <15 16 19 20>;
+            key-positions = <38 39>;
         };
 
         gaming-deactive {
             bindings = <&to 0>;
-            key-positions = <27 28 32 31>;
+            key-positions = <37 40>;
         };
 
         caret {
