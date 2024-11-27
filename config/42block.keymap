@@ -213,6 +213,10 @@
 &kp ESC    &hl 4 A         &hl 2 S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G      &kp H    &hm RCTRL J  &hm RIGHT_SHIFT K  &hl 2 L     &hl 4 SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z           &kp X    &hl 5 C           &hl 6 V      &hl 7 B    &kp N    &kp M        &kp COMMA          &kp PERIOD  &kp SLASH        &kp LS(LG(LA(LCTRL)))
                                     &kp LGUI          &kp LALT     &kp LCTRL  &kp RET  &lt 1 SPACE  &kp RSHFT
+
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -222,6 +226,9 @@
 &trans  &kp DOUBLE_QUOTES  &kp SQT        &hm LEFT_SHIFT TILDE  &hm LEFT_CONTROL GRAVE  &kp ESCAPE     &kp TAB        &hm RIGHT_CONTROL BACKSPACE  &hm RIGHT_SHIFT DEL  &trans        &trans        &kp GRAVE
 &trans  &trans             &kp BACKSLASH  &kp SLASH             &kp PIPE                &kp UNDER      &kp MINUS      &kp EQUAL                    &kp LS(LBRC)         &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
                                           &kp BACKSPACE         &kp TAB                 &kp DEL        &trans         &trans                       &trans
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -231,6 +238,9 @@
 &trans  &kp SQT    &kp UNDER  &hm LEFT_SHIFT LEFT_PARENTHESIS  &hm LEFT_CONTROL RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS   &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
 &trans  &kp UNDER  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                 &kp N0         &kp N0      &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
                               &trans                           &trans                              &trans         &trans      &trans  &trans
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -240,6 +250,9 @@
 &kp LSHFT                &kp A  &kp S  &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L    &kp L     &trans
 &mt LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
                                        &kp LSHFT  &kp SPACE  &kp LCTRL  &kp ENTER  &kp SPACE  &to 10
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -249,6 +262,9 @@
 &trans  &kp END  &kp HOME       &kp PG_DN      &trans     &trans        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
 &trans  &trans   &kp DEL        &trans         &kp GRAVE  &kp LC(LEFT)  &trans     &trans     &kp LBKT   &kp RBKT   &kp BSLH   &trans
                                 &trans         &trans     &trans        &kp RET    &trans     &kp RSHFT
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -258,6 +274,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &trans  &trans
                         &trans  &trans  &trans  &trans  &trans      &trans
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -267,6 +286,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &trans  &trans
                         &trans  &trans  &trans  &trans  &trans          &trans
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -276,6 +298,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(N4))  &kp LG(LS(N5))  &kp LG(LS(N6))  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(N1))  &kp LG(LS(N2))  &kp LG(LS(N3))  &trans  &trans
                         &trans  &trans  &trans  &trans  &trans          &trans
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -285,6 +310,9 @@
 &bt BT_CLR   &trans  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
 &trans       &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 0  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
                                    &trans        &trans        &mo 9         &trans   &trans  &trans
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -294,6 +322,9 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp K_PREVIOUS    &kp K_NEXT  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans      &trans  &trans  &trans
                         &trans  &trans  &trans  &trans  &kp K_PLAY_PAUSE  &trans
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
 
@@ -303,6 +334,9 @@
 &kp LSHFT                &kp LSHFT  &kp A  &kp W      &kp D      &kp F      &kp H      &kp J      &kp K             &kp L    &kp L     &trans
 &mt LEFT_CONTROL ESCAPE  &kp ESC    &kp X  &kp S      &kp V      &kp B      &kp N      &kp M      &kp COMMA         &kp DOT  &kp FSLH  &trans
                                            &kp LSHFT  &kp SPACE  &kp LCTRL  &kp ENTER  &kp SPACE  &gaming_deactive
+&kp ESC    &kp Q  &kp W  &kp E  &kp R
+&kp LSHFT  &kp A  &kp S  &kp D  &kp F
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp SPACE
             >;
         };
     };
