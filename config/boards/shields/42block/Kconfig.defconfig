@@ -9,4 +9,23 @@ config USB_DEVICE_MANUFACTURER
 config ZMK_MOUSE
     default y
 
+config ZMK_SPLIT_ROLE
+    default "central"
+
+endif
+
+if SHIELD_macropad
+
+config ZMK_KEYBOARD_NAME
+    default "macropad"
+
+config USB_DEVICE_MANUFACTURER
+    default "Waylon Walker"
+
+config ZMK_MOUSE
+    default n
+
+config ZMK_SPLIT_ROLE
+    default "peripheral"
+
 endif
