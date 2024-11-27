@@ -1,7 +1,7 @@
 if SHIELD_42BLOCK
 
 config ZMK_KEYBOARD_NAME
-    default "portajohnlp"
+    default "42block"
 
 config USB_DEVICE_MANUFACTURER
     default "Waylon Walker"
@@ -9,4 +9,26 @@ config USB_DEVICE_MANUFACTURER
 config ZMK_MOUSE
     default y
 
+config ZMK_SPLIT_ROLE
+    bool "Enable split central role"
+    default y
+
 endif
+
+if SHIELD_WYATT_3X5
+
+config ZMK_KEYBOARD_NAME
+    default "wyatt-3x5"
+
+config USB_DEVICE_MANUFACTURER
+    default "Waylon Walker"
+
+config ZMK_MOUSE
+    default n
+
+config ZMK_SPLIT_ROLE
+    bool "Enable split peripheral role"
+    default n
+
+endif
+
