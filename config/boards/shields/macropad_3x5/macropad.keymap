@@ -56,7 +56,7 @@
 
     keymap {
         compatible = "zmk,keymap";
-        label = "wyatt-3x5";
+        label = "macropad-3x5";
 
         default_layer {
             label = "Default";

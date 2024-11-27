@@ -15,10 +15,10 @@ config ZMK_SPLIT_ROLE
 
 endif
 
-if SHIELD_WYATT_3X5
+if SHIELDS_MACROPAD_3X5
 
 config ZMK_KEYBOARD_NAME
-    default "wyatt-3x5"
+    default "macropad-3x5"
 
 config USB_DEVICE_MANUFACTURER
     default "Waylon Walker"
@@ -31,4 +31,6 @@ config ZMK_SPLIT_ROLE
     default n
 
 endif
+
+
 
