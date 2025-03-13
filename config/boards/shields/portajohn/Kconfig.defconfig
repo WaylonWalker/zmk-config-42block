@@ -1,7 +1,7 @@
-if SHIELD_42BLOCK
+if SHIELD_PORTAJOHN
 
 config ZMK_KEYBOARD_NAME
-    default "42Block"
+    default "PortaJohn"
 
 config USB_DEVICE_MANUFACTURER
     default "Waylon Walker"
