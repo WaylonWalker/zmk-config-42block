@@ -1,18 +1,5 @@
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build-42block:
+  build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      config_path: config
-      config_name: 42block
-      shield_name: 42block
-      board_name: nice_nano
-
-  build-portajohn:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      config_path: config
-      config_name: portajohn
-      shield_name: portajohn
-      board_name: nice_nano
