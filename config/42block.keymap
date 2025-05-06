@@ -151,16 +151,6 @@
             key-positions = <30 31>;
         };
 
-        tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <15 16>;
-        };
-
-        single-quote {
-            bindings = <&kp SQT>;
-            key-positions = <14 15>;
-        };
-
         under {
             bindings = <&kp UNDERSCORE>;
             key-positions = <28 29>;
@@ -169,16 +159,6 @@
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <27 28>;
-        };
-
-        left-paren {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <16 19>;
-        };
-
-        right-paren {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <15 20>;
         };
 
         left-baracket {
