@@ -67,23 +67,27 @@
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
             require-prior-idle-ms = <125>;
+            layers = <0>;
         };
 
         ui-backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
             require-prior-idle-ms = <125>;
+            layers = <0>;
         };
 
         m,-del {
             bindings = <&kp DELETE>;
             key-positions = <31 32>;
+            layers = <0>;
         };
 
         df-tab {
             bindings = <&kp TAB>;
             key-positions = <16 15>;
             require-prior-idle-ms = <125>;
+            layers = <0>;
         };
 
         gaming-active {
@@ -94,26 +98,35 @@
         gaming-deactive {
             bindings = <&to 0>;
             key-positions = <37 40>;
+            require-prior-idle-ms = <125>;
         };
 
         caret {
             bindings = <&kp CARET>;
             key-positions = <6 18>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         ampersand {
             bindings = <&kp AMPERSAND>;
             key-positions = <7 19>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         asterisk {
             bindings = <&kp ASTERISK>;
             key-positions = <8 20>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         percent {
             bindings = <&kp PERCENT>;
             key-positions = <5 17>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         dollar {
@@ -124,21 +137,28 @@
         hash {
             bindings = <&kp HASH>;
             key-positions = <3 15>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         at {
             bindings = <&kp AT_SIGN>;
             key-positions = <2 14>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         bang {
             bindings = <&kp EXCLAMATION>;
             key-positions = <1 13>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 12>;
+            require-prior-idle-ms = <125>;
         };
 
         grave {
@@ -149,36 +169,64 @@
         minus {
             bindings = <&kp MINUS>;
             key-positions = <30 31>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         under {
             bindings = <&kp UNDERSCORE>;
             key-positions = <28 29>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <27 28>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         left-baracket {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <4 7>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         right-bracket {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <3 8>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         left-brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <28 31>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         right-brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <27 32>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
+        };
+
+        fj-paren {
+            bindings = <&kp LPAR>;
+            key-positions = <16 19>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
+        };
+
+        dk-paren {
+            bindings = <&kp RPAR>;
+            key-positions = <15 20>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
     };
 
