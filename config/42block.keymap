@@ -227,6 +227,13 @@
             layers = <0>;
             require-prior-idle-ms = <125>;
         };
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <5 38 39 6>;
+            require-prior-idle-ms = <1000>;
+            timeout-ms = <125>;
+        };
     };
 
     keymap {
