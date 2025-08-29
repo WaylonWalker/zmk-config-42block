@@ -102,61 +102,61 @@
 
         caret {
             bindings = <&kp CARET>;
-            key-positions = <6 18>;
+            key-positions = <6 40>;
             layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
         ampersand {
             bindings = <&kp AMPERSAND>;
-            key-positions = <7 19>;
+            key-positions = <7 40>;
             layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
         asterisk {
             bindings = <&kp ASTERISK>;
-            key-positions = <8 20>;
+            key-positions = <8 40>;
             layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
         percent {
             bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
+            key-positions = <5 40>;
             layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
         dollar {
             bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
+            key-positions = <4 40>;
         };
 
         hash {
             bindings = <&kp HASH>;
-            key-positions = <3 15>;
+            key-positions = <3 40>;
             layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
         at {
             bindings = <&kp AT_SIGN>;
-            key-positions = <2 14>;
+            key-positions = <2 40>;
             layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
         bang {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <1 13>;
+            key-positions = <1 40>;
             layers = <0>;
             require-prior-idle-ms = <125>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 12>;
+            key-positions = <0 40>;
             require-prior-idle-ms = <125>;
         };
 
