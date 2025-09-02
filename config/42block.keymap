@@ -243,14 +243,14 @@
         tn-f10 {
             bindings = <&kp F10>;
             key-positions = <5 30>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <250>;
             timeout-ms = <125>;
         };
 
         th-f11 {
             bindings = <&kp F11>;
             key-positions = <5 18>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <250>;
             timeout-ms = <125>;
         };
 
@@ -258,7 +258,7 @@
         ty-f12 {
             bindings = <&kp F12>;
             key-positions = <5 6>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <250>;
             timeout-ms = <125>;
         };
 
