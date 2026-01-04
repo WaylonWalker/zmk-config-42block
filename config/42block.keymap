@@ -251,17 +251,27 @@
             bindings = <&kp F11>;
             key-positions = <5 18>;
             require-prior-idle-ms = <500>;
-            timeout-ms = <125>;
+            timeout-ms = <50>;
         };
-
 
         ty-f12 {
             bindings = <&kp F12>;
             key-positions = <5 6>;
             require-prior-idle-ms = <500>;
-            timeout-ms = <125>;
+            timeout-ms = <50>;
         };
 
+        hj-playpause {
+            bindings = <&kp K_PLAY_PAUSE>;
+            key-positions = <18 19>;
+            require-prior-idle-ms = <500>;
+        };
+
+        nm-steam-marker {
+            bindings = <&kp LC(F12)>;
+            key-positions = <30 31>;
+            require-prior-idle-ms = <500>;
+        };
     };
 
     keymap {
