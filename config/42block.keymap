@@ -161,7 +161,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 40>;
+            key-positions = <0 1>;
             require-prior-idle-ms = <125>;
         };
 
