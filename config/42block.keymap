@@ -170,13 +170,6 @@
             key-positions = <16 17>;
         };
 
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <30 31>;
-            layers = <0>;
-            require-prior-idle-ms = <125>;
-        };
-
         under {
             bindings = <&kp UNDERSCORE>;
             key-positions = <28 29>;
