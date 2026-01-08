@@ -265,6 +265,12 @@
             key-positions = <30 31>;
             require-prior-idle-ms = <500>;
         };
+
+        yu-c-next {
+            bindings = <&kp C_NEXT>;
+            key-positions = <6 7>;
+            require-prior-idle-ms = <500>;
+        };
     };
 
     keymap {
@@ -355,10 +361,10 @@
 
         media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans      &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp K_PREVIOUS    &kp K_NEXT  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans      &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &kp K_PLAY_PAUSE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans            &trans             &trans              &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp C_RW    &kp C_VOLUME_UP   &kp C_VOLUME_DOWN  &kp C_FAST_FORWARD  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans            &trans             &trans              &trans  &trans
+                        &trans  &trans  &trans  &kp C_NEXT  &kp K_PLAY_PAUSE  &kp C_PREVIOUS
             >;
         };
 
