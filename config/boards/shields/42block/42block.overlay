@@ -12,6 +12,8 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "default_kscan";
         diode-direction = "col2row";
+        debounce-press-ms = <5>;
+        debounce-release-ms = <20>;
         wakeup-source;
 
         col-gpios

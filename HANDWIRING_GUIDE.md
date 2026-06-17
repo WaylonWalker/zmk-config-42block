@@ -114,7 +114,7 @@ Col 2: P1.15 (Pin42) ──────────────────┤
 Col 3: P0.02 (Pin4)  ──────────────────┤
 Col 4: P0.29 (Pin31) ──────────────────┤
 Col 5: P0.31 (Pin33) ──────────────────┤  Diode cathodes (banded end) point
-Col 6: P0.17 (Pin19) ──────────────────┤  toward these column connections
+Col 6: P0.17 (Pin19) ──────────────────┤  away from these column connections
 Col 7: P0.20 (Pin22) ──────────────────┤
 Col 8: P0.22 (Pin24) ──────────────────┤
 Col 9: P0.24 (Pin26) ──────────────────┤
@@ -157,11 +157,11 @@ Pin40                             Ctrl   Alt    GUI    Enter  Space  Shift
 
 ### Step 1: Diode Installation
 - Install one diode at each switch position
-- Diode cathode (banded end) must point toward the column connection
-- Diode anode (non-banded end) connects to the row wire
+- Diode anode (non-banded end) connects toward the column connection
+- Diode cathode (banded end) connects to the row wire
 
 ### Step 2: Column Wiring
-- Solder all diode cathodes in the same column together
+- Solder all diode anodes in the same column together
 - Run a wire from each column to the corresponding nRF52840 pin
 - Use the pin mapping from Diagram 2 for exact connections
 
