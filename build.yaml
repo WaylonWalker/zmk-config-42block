@@ -3,5 +3,5 @@
 # shield arrays, for more control, add individual board + shield combinations
 # to the `include` property.
 include:
-  - board: nice_nano
+  - board: nice_nano/nrf52840/zmk
     shield: 42block
