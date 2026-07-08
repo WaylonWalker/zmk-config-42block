@@ -6,12 +6,9 @@ include:
   - board: nice_nano/nrf52840/zmk
     shield: 42block
     artifact-name: 42block
-    cmake-args: "-DCONFIG_BT_DEVICE_NAME='\\\"42block\\\"' -DCONFIG_ZMK_KEYBOARD_NAME='\\\"42block\\\"'"
   - board: nice_nano/nrf52840/zmk
-    shield: 42block
+    shield: portajohn
     artifact-name: portajohn
-    cmake-args: "-DCONFIG_BT_DEVICE_NAME='\\\"portajohn\\\"' -DCONFIG_ZMK_KEYBOARD_NAME='\\\"portajohn\\\"'"
   - board: nice_nano/nrf52840/zmk
-    shield: 42block
+    shield: ironhorse
     artifact-name: ironhorse
-    cmake-args: "-DCONFIG_BT_DEVICE_NAME='\\\"ironhorse\\\"' -DCONFIG_ZMK_KEYBOARD_NAME='\\\"ironhorse\\\"'"
