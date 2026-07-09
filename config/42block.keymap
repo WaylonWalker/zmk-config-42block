@@ -355,7 +355,7 @@
 &bootloader     &bootloader  &bt BT_SEL 7  &bt BT_SEL 8  &bt BT_SEL 9  &out OUT_USB  &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
 &bt BT_CLR      &trans       &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
 &bt BT_CLR_ALL  &trans       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 0  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
-                                           &trans        &trans        &mo 9         &trans   &trans  &trans
+                                           &trans        &mo 11        &mo 9         &mo 9    &mo 11  &trans
             >;
         };
 
@@ -374,6 +374,15 @@
 &kp LSHFT                &kp LSHFT  &kp A  &kp W      &kp D      &kp F      &kp H      &kp J      &kp K             &kp L    &kp L     &trans
 &mt LEFT_CONTROL ESCAPE  &kp ESC    &kp X  &kp S      &kp V      &kp B      &kp N      &kp M      &kp COMMA         &kp DOT  &kp FSLH  &trans
                                            &kp LSHFT  &kp SPACE  &kp LCTRL  &kp ENTER  &kp SPACE  &gaming_deactive
+            >;
+        };
+
+        Fkeys2 {
+            bindings = <
+&trans  &trans          &kp K_WWW          &kp C_AL_FILE_BROWSER  &trans                        &kp C_AL_TEXT_EDITOR      &kp F22  &kp F17  &kp F18  &kp F19  &trans   &trans
+&trans  &kp C_AL_AUDIO  &kp C_AL_DATABASE  &kp C_AL_CALCULATOR    &kp C_AL_CONTROL_PANEL        &kp C_AL_GRAPHICS_EDITOR  &kp F21  &kp F14  &kp F15  &kp F16  &kp F24  &trans
+&trans  &trans          &trans             &kp C_AL_NETWORK_CHAT  &kp C_AL_AV_CAPTURE_PLAYBACK  &trans                    &kp F20  &kp F11  &kp F12  &kp F13  &kp F23  &trans
+                                           &trans                 &trans                        &trans                    &trans   &trans   &trans
             >;
         };
     };
