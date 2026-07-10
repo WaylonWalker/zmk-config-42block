@@ -58,6 +58,13 @@
             bindings = <&kp LC(RIGHT)>;
             label = "VIM___W";
         };
+
+        select-all-delete: select-all-delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A)>, <&kp DELETE>;
+            label = "SELECT_ALL_DELETE";
+        };
     };
 
     combos {
@@ -77,6 +84,13 @@
         ui-backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
+            require-prior-idle-ms = <125>;
+            layers = <0>;
+        };
+
+        uio-select-all-delete {
+            bindings = <&select-all-delete>;
+            key-positions = <7 8 9>;
             require-prior-idle-ms = <125>;
             layers = <0>;
         };
