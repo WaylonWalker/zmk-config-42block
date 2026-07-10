@@ -48,30 +48,29 @@ ROWS (4 total, running across)
 
 ## Diagram 2: Nice!Nano Clone Pinout (Bottom View)
 
-### Nice!Nano Clone Pin Mapping Table
+### Nice!Nano-Compatible Pin Mapping Table
 
-| Board Label | GPIO Pin | Function | Matrix Connection |
-|-------------|-----------|-----------|-------------------|
-| A8          | P0.31     | Col5      | T / Ctrl |
-| A10         | P0.29     | Col4      | R / . |
-| F4          | P0.30     | -         | Not used |
-| F5          | P0.31     | Col5      | T / Ctrl |
-| F6          | P0.02     | Col3      | E / / |
-| F7          | P1.15     | Col2      | W / V |
-| B1          | P1.13     | Col1      | Q / B |
-| B3          | P1.11     | Col0      | ESC / Shift |
-| B2          | P0.10     | Row0      | Top row |
-| B4          | P1.04     | Row2      | Third row |
-| B5          | P1.06     | Row3      | Bottom row |
-| B6          | P0.09     | Row1      | Second row |
-| D2          | P0.08     | -         | Not used |
-| D3          | P0.06     | -         | Not used |
-| D0          | P0.17     | Col6      | Y / N |
-| D1          | P0.20     | Col7      | U / M |
-| D4          | P0.22     | Col8      | I / K |
-| C6          | P0.24     | Col9      | O / L |
-| D7          | P1.00     | Col10     | P / ; |
-| E6          | P0.11     | Col11     | BSPC / Ctrl |
+Clone silkscreen labels are not consistent. Use the Pro Micro position and
+GPIO together, and verify the controller pinout before soldering.
+
+| Pro Micro position | GPIO Pin | Function | Matrix Connection |
+|--------------------|----------|----------|-------------------|
+| D14                | P1.11    | Col0     | ESC / Shift |
+| D15                | P1.13    | Col1     | Q / B |
+| D18 / A0           | P1.15    | Col2     | W / V |
+| D19 / A1           | P0.02    | Col3     | E / C |
+| D20 / A2           | P0.29    | Col4     | R / V |
+| D21 / A3           | P0.31    | Col5     | T / B |
+| D2                 | P0.17    | Col6     | Y / N |
+| D3                 | P0.20    | Col7     | U / M |
+| D4 / A6            | P0.22    | Col8     | I / , |
+| D5                 | P0.24    | Col9     | O / . |
+| D6 / A7            | P1.00    | Col10    | P / / |
+| D7                 | P0.11    | Col11    | BSPC / Ctrl |
+| D16                | P0.10    | Row0     | Top row |
+| D10 / A10          | P0.09    | Row1     | Second row |
+| D8 / A8            | P1.04    | Row2     | Third row |
+| D9 / A9            | P1.06    | Row3     | Bottom row |
 
 
 **Power Pins:**
@@ -82,25 +81,25 @@ ROWS (4 total, running across)
 
 ### Required Connections for 42block:
 
-**COLUMN PINS** (connect to these nRFMicro pins):
-- Col0: B3 (P1.11)
-- Col1: B1 (P1.13)  
-- Col2: F7 (P1.15)
-- Col3: A10/F6 (P0.02)
-- Col4: A9 (P0.29)
-- Col5: A8/F5 (P0.31)
-- Col6: D0 (P0.17)
-- Col7: D1 (P0.20)
-- Col8: D4 (P0.22)
-- Col9: C6 (P0.24)
-- Col10: D7 (P1.00)
-- Col11: E6 (P0.11)
+**COLUMN PINS** (connect to these Pro Micro positions):
+- Col0: D14 (P1.11)
+- Col1: D15 (P1.13)
+- Col2: D18/A0 (P1.15)
+- Col3: D19/A1 (P0.02)
+- Col4: D20/A2 (P0.29)
+- Col5: D21/A3 (P0.31)
+- Col6: D2 (P0.17)
+- Col7: D3 (P0.20)
+- Col8: D4/A6 (P0.22)
+- Col9: D5 (P0.24)
+- Col10: D6/A7 (P1.00)
+- Col11: D7 (P0.11)
 
-**ROW PINS** (connect to these nRFMicro pins):
-- Row0: B2 (P0.10)
-- Row1: B6 (P0.09)
-- Row2: B4 (P1.04)
-- Row3: B5 (P1.06)
+**ROW PINS** (connect to these Pro Micro positions):
+- Row0: D16 (P0.10)
+- Row1: D10/A10 (P0.09)
+- Row2: D8/A8 (P1.04)
+- Row3: D9/A9 (P1.06)
 
 ---
 
