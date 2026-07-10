@@ -59,7 +59,7 @@
             label = "VIM___W";
         };
 
-        select-all-delete: select-all-delete {
+        select_all_delete: select-all-delete {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(A)>, <&kp DELETE>;
@@ -89,7 +89,7 @@
         };
 
         uio-select-all-delete {
-            bindings = <&select-all-delete>;
+            bindings = <&select_all_delete>;
             key-positions = <7 8 9>;
             require-prior-idle-ms = <125>;
             layers = <0>;
