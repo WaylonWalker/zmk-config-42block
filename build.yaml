@@ -12,3 +12,6 @@ include:
   - board: nice_nano/nrf52840/zmk
     shield: ironhorse
     artifact-name: ironhorse
+  - board: nice_nano/nrf52840/zmk
+    shield: ironhorse_view
+    artifact-name: ironhorse-view

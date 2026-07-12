@@ -1,0 +1,9 @@
+if SHIELD_IRONHORSE_VIEW
+
+config ZMK_KEYBOARD_NAME
+    default "ironhorse-view"
+
+config USB_DEVICE_MANUFACTURER
+    default "Waylon Walker"
+
+endif

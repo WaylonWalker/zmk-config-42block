@@ -5,3 +5,12 @@ underneath it.  It prints in two solid chunks that are glued together.  Its thic
 
 
 ![42block](https://github.com/user-attachments/assets/e42129ac-5e9f-4919-964a-d230ac8909a2)
+
+## Build artifacts
+
+- `42block` — 42-key monoblock keyboard.
+- `portajohn` — existing Portajohn build.
+- `ironhorse` — existing Ironhorse build.
+- `ironhorse-view` — standalone three-key Bluetooth macropad with an SSD1306
+  status display. It reports its own battery, Bluetooth, and output state; it
+  is not an Ironhorse split peripheral and cannot report Ironhorse state.

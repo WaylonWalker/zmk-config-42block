@@ -1,0 +1,14 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &bt BT_PRV  &bt BT_NXT  &out OUT_TOG
+            >;
+        };
+    };
+};

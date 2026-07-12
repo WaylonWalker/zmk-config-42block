@@ -202,3 +202,55 @@ These positions should be left empty:
 
 ## REMINDER: BOTTOM VIEW
 All diagrams show the keyboard from the bottom. When you flip the keyboard over for use, the layout will be mirrored left-to-right.
+
+---
+
+## Ironhorse View: standalone wireless companion
+
+Ironhorse View is a separate, nice!nano-compatible Bluetooth macropad. It is
+not an Ironhorse split peripheral: pair it with the host independently. Its
+standard ZMK status screen reports the companion's own battery, Bluetooth
+profile, and output state—not Ironhorse state.
+
+### Connections
+
+| Function | Pro Micro position | nRF52840 GPIO | Connect to |
+|---|---:|---|---|
+| OLED SDA | D2 | P0.17 | SSD1306 SDA |
+| OLED SCL | D3 | P0.20 | SSD1306 SCL |
+| Key 1: Bluetooth profile previous | D4 | P0.22 | One switch terminal |
+| Key 2: Bluetooth profile next | D5 | P0.24 | One switch terminal |
+| Key 3: output toggle | D6 | P1.00 | One switch terminal |
+| Ground | GND | — | Other terminal of every switch and OLED GND |
+| OLED power | VCC | 3.3 V | SSD1306 VCC |
+
+```
+                  nice!nano-compatible controller
+  3.3V/VCC  ------------------------------------ OLED VCC
+  GND       ------------+----------------------- OLED GND
+                      +--[Key 1]--- D4 / P0.22
+                      +--[Key 2]--- D5 / P0.24
+                      +--[Key 3]--- D6 / P1.00
+  D2 / P0.17 ---------------------------------- OLED SDA
+  D3 / P0.20 ---------------------------------- OLED SCL
+```
+
+Each key is a direct, active-low input with the controller's internal pull-up:
+wire one switch terminal to its listed pin and the other to the shared ground.
+There is **no matrix and no diode**. All parts must share ground.
+
+### OLED requirements and caveats
+
+- Power the I2C display from **3.3 V only**. Do not connect a 5 V OLED supply
+  or 5 V I2C pull-ups to the controller. The SDA/SCL pull-ups must terminate at
+  3.3 V; many OLED modules already include them.
+- This configuration expects an SSD1306 controller at I2C address `0x3C` and a
+  128×64 panel. Verify the module's controller and address before wiring;
+  look-alike modules can use another controller or `0x3D`.
+- Nice!nano-compatible clone silkscreen and pinout can vary. Verify both the
+  Pro Micro position and the nRF52840 GPIO against the specific controller
+  before soldering.
+- OLED panel colors are fixed physical properties of the panel (including
+  single-color or blue/yellow variants); firmware cannot change them.
+- The display can blank when the companion idles or sleeps. Pressing a key
+  wakes the companion/display, so allow it to wake before expecting an update.
