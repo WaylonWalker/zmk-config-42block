@@ -205,52 +205,132 @@ All diagrams show the keyboard from the bottom. When you flip the keyboard over 
 
 ---
 
-## Ironhorse View: standalone wireless companion
+## Ironhorse View: wireless split peripheral
 
-Ironhorse View is a separate, nice!nano-compatible Bluetooth macropad. It is
-not an Ironhorse split peripheral: pair it with the host independently. Its
-standard ZMK status screen reports the companion's own battery, Bluetooth
-profile, and output state—not Ironhorse state.
+Ironhorse is the **central** and is the only part paired to a computer or
+phone. View is a ZMK BLE split **peripheral**: it sends its nine switch
+positions to Ironhorse and does not advertise or pair as an independent host
+keyboard. Its SSD1306 is local to View; do not expect it to show Ironhorse's
+active layer, host Bluetooth profile, or host connection state.
 
-### Connections
+Flash `ironhorse-central` to Ironhorse and `ironhorse-view-peripheral` to
+View. Do not interchange them.
+
+Ironhorse reserves one BLE connection and bond for View, while retaining ten
+host profiles (`BT_MAX_CONN` and `BT_MAX_PAIRED` are both 11).
+
+### View wiring: top view, 3 × 3
+
+Wire one terminal of **each** switch to the listed GPIO and the other terminal
+to a shared GND rail. These are direct active-low inputs using internal
+pull-ups: there is **no matrix and no diode**.
+
+| Physical position | Switch function | Pro Micro position | nRF52840 GPIO |
+|---|---|---:|---|
+| top left | GAME / L1 | D4 | P0.22 |
+| top middle | MIC | D5 | P0.24 |
+| top right | RECORD | D6 | P1.00 |
+| middle left | SCREENSHOT | D7 | P0.11 |
+| middle | media previous | D8 | P1.04 |
+| middle right | media next | D18 / A0 | P1.15 |
+| bottom left | Android Home | D19 / A1 | P0.02 |
+| bottom middle | Android Back | D20 / A2 | P0.29 |
+| bottom right | Signal launcher | D21 / A3 | P0.31 |
+
+```
+                View, top/use-side view
+       +-----------+-----------+-----------+
+       | GAME / L1 |    MIC    |  RECORD   |
+       | D4 P0.22  | D5 P0.24  | D6 P1.00  |
+       +-----------+-----------+-----------+
+       | SCREENSHOT| MEDIA PREV| MEDIA NEXT|
+       | D7 P0.11  | D8 P1.04  | D18 P1.15 |
+       +-----------+-----------+-----------+
+       | ANDR HOME | ANDR BACK |  SIGNAL   |
+       | D19 P0.02 | D20 P0.29 | D21 P0.31 |
+       +-----------+-----------+-----------+
+```
+
+Nice!nano-compatible clone silkscreen can vary. Verify the Pro Micro location
+and GPIO against the actual controller before soldering.
+
+### View OLED wiring
 
 | Function | Pro Micro position | nRF52840 GPIO | Connect to |
 |---|---:|---|---|
 | OLED SDA | D2 | P0.17 | SSD1306 SDA |
 | OLED SCL | D3 | P0.20 | SSD1306 SCL |
-| Key 1: Bluetooth profile previous | D4 | P0.22 | One switch terminal |
-| Key 2: Bluetooth profile next | D5 | P0.24 | One switch terminal |
-| Key 3: output toggle | D6 | P1.00 | One switch terminal |
-| Ground | GND | — | Other terminal of every switch and OLED GND |
 | OLED power | VCC | 3.3 V | SSD1306 VCC |
+| Ground | GND | — | SSD1306 GND and switch common rail |
 
-```
-                  nice!nano-compatible controller
-  3.3V/VCC  ------------------------------------ OLED VCC
-  GND       ------------+----------------------- OLED GND
-                      +--[Key 1]--- D4 / P0.22
-                      +--[Key 2]--- D5 / P0.24
-                      +--[Key 3]--- D6 / P1.00
-  D2 / P0.17 ---------------------------------- OLED SDA
-  D3 / P0.20 ---------------------------------- OLED SCL
-```
+Use an SSD1306 128×64 display at I2C address `0x3C`. Supply and I2C pull-ups
+must be 3.3 V only; never connect 5 V supply or pull-ups to these pins.
 
-Each key is a direct, active-low input with the controller's internal pull-up:
-wire one switch terminal to its listed pin and the other to the shared ground.
-There is **no matrix and no diode**. All parts must share ground.
+### Key behavior
 
-### OLED requirements and caveats
+The first View key selects layer 3 from every layer except layer 3 itself; on
+layer 3 it selects layer 1. Ironhorse keys retain their existing positions
+0–41 and reversed physical transform. View occupies positions 42–50.
 
-- Power the I2C display from **3.3 V only**. Do not connect a 5 V OLED supply
-  or 5 V I2C pull-ups to the controller. The SDA/SCL pull-ups must terminate at
-  3.3 V; many OLED modules already include them.
-- This configuration expects an SSD1306 controller at I2C address `0x3C` and a
-  128×64 panel. Verify the module's controller and address before wiring;
-  look-alike modules can use another controller or `0x3D`.
-- Nice!nano-compatible clone silkscreen and pinout can vary. Verify both the
-  Pro Micro position and the nRF52840 GPIO against the specific controller
-  before soldering.
-- OLED panel colors are fixed physical properties of the panel (including
-  single-color or blue/yellow variants); firmware cannot change them.
-- The display can blank when the companion idles or sleeps. Pressing a key
-  wakes the companion/display, so allow it to wake before expecting an update.
+| View key | ZMK output | Intended Android/host action |
+|---|---|---|
+| GAME / L1 | `&to 3`; on layer 3, `&to 1` | gaming layer / layer 1 |
+| MIC | F13 | Key Mapper mic trigger |
+| RECORD | F14 | Key Mapper record trigger |
+| SCREENSHOT | F15 | Key Mapper screenshot trigger |
+| media previous | Consumer Previous Track | standard media previous |
+| media next | Consumer Next Track | standard media next |
+| Android Home | F16 | Key Mapper Home trigger |
+| Android Back | F17 | Key Mapper Back trigger |
+| Signal | F18 | Key Mapper Signal-launch trigger |
+
+On a stock Pixel 6, configure Key Mapper bindings for F13–F18. Android and/or
+Key Mapper may not distinguish every extended F-key on every keyboard or OS
+version; if a trigger cannot be distinguished, substitute a keycode Key Mapper
+does recognize. Key Mapper's Accessibility service must remain enabled and may
+be interrupted by Android battery optimization or accessibility policy.
+Android can restrict screen recording, microphone control, Home, Back, and app
+launches; their final behavior depends on Key Mapper permissions, Android
+version, lock state, and the target app. The firmware sends only the listed HID
+events and cannot bypass those restrictions.
+
+### First split boot and host pairing
+
+1. If View was previously flashed as the standalone macropad, or either
+   controller has an old split bond, first complete the reset procedure below.
+   Otherwise flash the corresponding central and peripheral images above.
+2. With neither half carrying an incompatible split bond, power Ironhorse and
+   View at the same time. The unbonded View automatically bonds to the central;
+   it is not shown as a host-pairable keyboard.
+3. After the split is connected, put Ironhorse in its normal host-pairing mode
+   using its existing keymap/profile controls, then pair **Ironhorse** from
+   Android's Bluetooth settings. Do not look for or pair View.
+4. Select the intended Ironhorse Bluetooth profile and test a View key. When
+   Ironhorse is USB-powered, select Bluetooth output before testing Android
+   BLE input if its existing configuration defaults to USB output.
+
+### Recovery: validated settings reset
+
+This repository builds two named copies of ZMK's supported `settings_reset`
+shield: `ironhorse-central-reset` and `ironhorse-view-peripheral-reset`. They
+are intentionally built **without** `ironhorse` or `ironhorse_view`; this is
+the pinned ZMK procedure. Each runs once to clear the controller's persistent
+settings partition, including split bonds, host Bluetooth bonds/profiles,
+output selection, and other saved settings.
+
+Use this procedure when migrating from the former standalone View firmware or
+when the halves fail to pair after confirming the normal images are on the
+correct controllers:
+
+1. Put both controllers in bootloader mode.
+2. Flash `ironhorse-central-reset` to Ironhorse and
+   `ironhorse-view-peripheral-reset` to View.
+3. Flash `ironhorse-central` to Ironhorse and
+   `ironhorse-view-peripheral` to View immediately afterwards.
+4. Power both halves together so they make a new split bond, then forget the
+   old Ironhorse keyboard on every host and pair Ironhorse again.
+
+The reset firmware has Bluetooth disabled, so neither half is pairable until
+its normal firmware has been restored. Resetting either half alone is not a
+split-pairing recovery; reset both halves, and expect all host bonds to be
+lost.

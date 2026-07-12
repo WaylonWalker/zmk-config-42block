@@ -1,1 +1,128 @@
 #include "42block.keymap"
+
+/*
+ * Keep all 42block behavior, macro, combo, and layer definitions intact.
+ * These overrides replace only each layer's bindings property: positions 0-41
+ * remain byte-for-byte equivalent bindings, while positions 42-50 belong to
+ * the View peripheral.
+ */
+
+&{/keymap/default_layer} {
+    bindings = <
+&kp TAB    &gaming_active  &kp W       &kp E             &kp R        &hl 8 T    &hl 8 Y  &kp U        &kp I              &kp O                 &kp P            &kp BACKSPACE
+&kp ESC    &hl 4 A         &hl 2 S     &hm LEFT_SHIFT D  &hm LCTRL F  &kp G      &kp H    &hm RCTRL J  &hm RIGHT_SHIFT K  &hl 2 L               &hl 4 SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z           &hm LALT X  &hl 5 C           &hl 6 V      &hl 7 B    &kp N    &kp M        &kp COMMA          &hm RIGHT_ALT PERIOD  &kp SLASH        &kp LS(LG(LA(LCTRL)))
+                                       &kp LGUI          &kp LALT     &kp LCTRL  &kp RET  &lt 1 SPACE  &kp RSHFT
+&to 3      &kp F13         &kp F14     &kp F15            &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/symbols} {
+    bindings = <
+&trans  &kp LS(EXCL)       &kp LS(AT)     &kp LS(POUND)         &kp LS(DLLR)            &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)                 &kp LS(STAR)         &kp LS(LPAR)  &kp LS(RPAR)  &kp DEL
+&trans  &kp DOUBLE_QUOTES  &kp SQT        &hm LEFT_SHIFT TILDE  &hm LEFT_CONTROL GRAVE  &kp ESCAPE     &kp TAB        &hm RIGHT_CONTROL BACKSPACE  &hm RIGHT_SHIFT DEL  &trans        &trans        &kp GRAVE
+&trans  &trans             &kp BACKSLASH  &kp SLASH             &kp PIPE                &kp UNDER      &kp MINUS      &kp EQUAL                    &kp LS(LBRC)         &kp LS(RBRC)  &kp LS(PIPE)  &kp LS(TILDE)
+                                           &kp BACKSPACE         &kp TAB                 &kp DEL        &trans         &trans                       &trans
+&to 3  &kp F13             &kp F14        &kp F15               &kp C_PREVIOUS          &kp C_NEXT      &kp F16  &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/numpad} {
+    bindings = <
+&trans  &trans     &trans     &kp LBKT                         &kp RBKT                            &hl 8 PERCENT  &hl 8 PLUS  &kp N7  &kp N8  &kp N9  &kp STAR       &trans
+&trans  &kp SQT    &kp UNDER  &hm LEFT_SHIFT LEFT_PARENTHESIS  &hm LEFT_CONTROL RIGHT_PARENTHESIS  &kp LS(DLLR)   &kp MINUS   &kp N4  &kp N5  &kp N6  &kp LS(UNDER)  &kp GRAVE
+&trans  &kp UNDER  &kp DOT    &kp LS(LEFT_BRACE)               &kp LS(RIGHT_BRACE)                 &kp N0         &kp N0      &kp N1  &kp N2  &kp N3  &kp DOT        &kp FSLH
+                               &trans                           &trans                              &trans         &trans      &trans  &trans
+&to 3  &kp F13    &kp F14    &kp F15                           &kp C_PREVIOUS                       &kp C_NEXT     &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/gaming} {
+    bindings = <
+&kp TAB                  &kp Q  &kp W  &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I      &kp O    &kp P     &trans
+&kp LSHFT                &kp A  &kp S  &kp D      &kp F      &kp G      &kp H      &kp J      &kp K      &kp L    &kp L     &trans
+&mt LEFT_CONTROL ESCAPE  &kp Z  &kp X  &kp C      &kp V      &kp B      &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &trans
+                                       &kp LSHFT  &kp SPACE  &kp LCTRL  &kp ENTER  &kp SPACE  &to 10
+&to 1                    &kp F13 &kp F14 &kp F15 &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/vimmy} {
+    bindings = <
+&trans  &trans   &kp LC(RIGHT)  &kp LC(RIGHT)  &kp LEFT   &trans        &kp LC(C)  &kp PG_UP  &kp HOME   &vim___0   &kp LC(V)  &trans
+&trans  &kp END  &kp HOME       &kp PG_DN      &trans     &trans        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+&trans  &trans   &kp DEL        &trans         &kp GRAVE  &kp LC(LEFT)  &trans     &trans     &kp LBKT   &kp RBKT   &kp BSLH   &trans
+                                &trans         &trans     &trans        &kp RET    &trans     &kp RSHFT
+&to 3  &kp F13  &kp F14        &kp F15         &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/switchwin} {
+    bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans      &trans
+&to 3  &kp F13  &kp F14 &kp F15 &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/joinwin} {
+    bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LC(N7))  &kp LG(LC(N8))  &kp LG(LC(N9))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LC(N4))  &kp LG(LC(N5))  &kp LG(LC(N6))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans          &trans
+&to 3  &kp F13  &kp F14 &kp F15 &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/sendwin} {
+    bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(N7))  &kp LG(LS(N8))  &kp LG(LS(N9))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(N4))  &kp LG(LS(N5))  &kp LG(LS(N6))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(N1))  &kp LG(LS(N2))  &kp LG(LS(N3))  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans          &trans
+&to 3  &kp F13  &kp F14 &kp F15 &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/fkeys} {
+    bindings = <
+&bootloader     &bootloader  &bt BT_SEL 7  &bt BT_SEL 8  &bt BT_SEL 9  &out OUT_USB  &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
+&bt BT_CLR      &trans       &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &out OUT_BLE  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans
+&bt BT_CLR_ALL  &trans       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 0  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans
+                                           &trans        &mo 11        &mo 9         &mo 9    &mo 11  &trans
+&to 3          &kp F13     &kp F14        &kp F15        &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/media} {
+    bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans            &trans             &trans              &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp C_RW    &kp C_VOLUME_UP   &kp C_VOLUME_DOWN  &kp C_FAST_FORWARD  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans            &trans             &trans              &trans  &trans
+                        &trans  &trans  &trans  &kp C_NEXT  &kp K_PLAY_PAUSE  &kp C_PREVIOUS
+&to 3  &kp F13  &kp F14 &kp F15 &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/gaming2} {
+    bindings = <
+&kp TAB                  &kp Q      &kp W  &kp E      &kp R      &kp T      &kp Y      &kp U      &kp I             &kp O    &kp P     &trans
+&kp LSHFT                &kp LSHFT  &kp A  &kp W      &kp D      &kp F      &kp H      &kp J      &kp K             &kp L    &kp L     &trans
+&mt LEFT_CONTROL ESCAPE  &kp ESC    &kp X  &kp S      &kp V      &kp B      &kp N      &kp M      &kp COMMA         &kp DOT  &kp FSLH  &trans
+                                           &kp LSHFT  &kp SPACE  &kp LCTRL  &kp ENTER  &kp SPACE  &gaming_deactive
+&to 3                    &kp F13    &kp F14 &kp F15 &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};
+
+&{/keymap/Fkeys2} {
+    bindings = <
+&trans  &trans          &kp K_WWW          &kp C_AL_FILE_BROWSER  &trans                        &kp C_AL_TEXT_EDITOR      &kp F22  &kp F17  &kp F18  &kp F19  &trans   &trans
+&trans  &kp C_AL_AUDIO  &kp C_AL_DATABASE  &kp C_AL_CALCULATOR    &kp C_AL_CONTROL_PANEL        &kp C_AL_GRAPHICS_EDITOR  &kp F21  &kp F14  &kp F15  &kp F16  &kp F24  &trans
+&trans  &trans          &trans             &kp C_AL_NETWORK_CHAT  &kp C_AL_AV_CAPTURE_PLAYBACK  &trans                    &kp F20  &kp F11  &kp F12  &kp F13  &kp F23  &trans
+                                           &trans                 &trans                        &trans                    &trans   &trans   &trans
+&to 3                                      &kp F13                &kp F14                     &kp F15  &kp C_PREVIOUS &kp C_NEXT &kp F16 &kp F17 &kp F18
+    >;
+};

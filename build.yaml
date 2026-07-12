@@ -11,7 +11,15 @@ include:
     artifact-name: portajohn
   - board: nice_nano/nrf52840/zmk
     shield: ironhorse
-    artifact-name: ironhorse
+    artifact-name: ironhorse-central
   - board: nice_nano/nrf52840/zmk
     shield: ironhorse_view
-    artifact-name: ironhorse-view
+    artifact-name: ironhorse-view-peripheral
+  # settings_reset must be built without either split shield, per ZMK's reset
+  # procedure. Flash the named artifact to the corresponding controller.
+  - board: nice_nano/nrf52840/zmk
+    shield: settings_reset
+    artifact-name: ironhorse-central-reset
+  - board: nice_nano/nrf52840/zmk
+    shield: settings_reset
+    artifact-name: ironhorse-view-peripheral-reset

@@ -10,7 +10,12 @@ underneath it.  It prints in two solid chunks that are glued together.  Its thic
 
 - `42block` — 42-key monoblock keyboard.
 - `portajohn` — existing Portajohn build.
-- `ironhorse` — existing Ironhorse build.
-- `ironhorse-view` — standalone three-key Bluetooth macropad with an SSD1306
-  status display. It reports its own battery, Bluetooth, and output state; it
-  is not an Ironhorse split peripheral and cannot report Ironhorse state.
+- `ironhorse-central` — Ironhorse central build. It pairs with host devices
+  and receives View's split input.
+- `ironhorse-view-peripheral` — nine-key Ironhorse View BLE split peripheral
+  with a local SSD1306 display. It is not a host-pairable keyboard.
+- `ironhorse-central-reset` / `ironhorse-view-peripheral-reset` — validated
+  settings-reset images for clearing both halves before re-pairing.
+
+See [HANDWIRING_GUIDE.md](HANDWIRING_GUIDE.md) for View wiring, split pairing,
+and Android Key Mapper limitations.

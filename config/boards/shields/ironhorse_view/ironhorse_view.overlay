@@ -1,4 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "../ironhorse/ironhorse_view_transform.dtsi"
 
 / {
     chosen {
@@ -17,14 +18,21 @@
             = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 
     ironhorse_view_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
-        columns = <3>;
-        rows = <1>;
-        map = <RC(0,0) RC(0,1) RC(0,2)>;
+        columns = <21>;
+        rows = <4>;
+        col-offset = <12>;
+        map = <IRONHORSE_VIEW_TRANSFORM_MAP>;
     };
 };
 
